@@ -1,0 +1,403 @@
+user@M001# mongo "mongodb+srv://sandbox.kldlb.mongodb.net/myFirstDatabase" --username m001-student
+MongoDB shell version v4.4.3
+Enter password: 
+connecting to: mongodb://sandbox-shard-00-01.kldlb.mongodb.net:27017,sandbox-shard-00-00.kldlb.mongodb.net:27017,sandbox-shard-00-02.kldlb.mongodb.net:27017/myFirstDatabase?authSource=admin&compressors=disabled&gssapiServiceName=mongodb&replicaSet=atlas-ny3pd5-shard-0&ssl=true
+Implicit session: session { "id" : UUID("0a8456e6-6902-4f44-b0cf-8d4523734ec4") }
+MongoDB server version: 5.0.6
+WARNING: shell and server versions do not match
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+        https://docs.mongodb.com/
+Questions? Try the MongoDB Developer Community Forums
+        https://community.mongodb.com
+MongoDB Enterprise atlas-ny3pd5-shard-0:PRIMARY> show dbs
+admin               0.000GB
+local               5.550GB
+sample_airbnb       0.051GB
+sample_analytics    0.009GB
+sample_geospatial   0.001GB
+sample_guides       0.000GB
+sample_mflix        0.049GB
+sample_restaurants  0.007GB
+sample_supplies     0.001GB
+sample_training     0.054GB
+sample_weatherdata  0.003GB
+MongoDB Enterprise atlas-ny3pd5-shard-0:PRIMARY> use sample_training
+switched to db sample_training
+MongoDB Enterprise atlas-ny3pd5-shard-0:PRIMARY> db.trips.find()
+{ "_id" : ObjectId("572bb8222b288919b68abf5a"), "tripduration" : 379, "start station id" : 476, "start station name" : "E 31 St & 3 Ave", "end station id" : 498, "end station name" : "Broadway & W 32 St", "bikeid" : 17827, "usertype" : "Subscriber", "birth year" : 1969, "start station location" : { "type" : "Point", "coordinates" : [ -73.97966069, 40.74394314 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -73.98808416, 40.74854862 ] }, "start time" : ISODate("2016-01-01T00:00:45Z"), "stop time" : ISODate("2016-01-01T00:07:04Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf5b"), "tripduration" : 889, "start station id" : 268, "start station name" : "Howard St & Centre St", "end station id" : 3002, "end station name" : "South End Ave & Liberty St", "bikeid" : 22794, "usertype" : "Subscriber", "birth year" : 1961, "start station location" : { "type" : "Point", "coordinates" : [ -73.99973337, 40.71910537 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -74.015756, 40.711512 ] }, "start time" : ISODate("2016-01-01T00:01:06Z"), "stop time" : ISODate("2016-01-01T00:15:56Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf5c"), "tripduration" : 589, "start station id" : 489, "start station name" : "10 Ave & W 28 St", "end station id" : 284, "end station name" : "Greenwich Ave & 8 Ave", "bikeid" : 21997, "usertype" : "Subscriber", "birth year" : 1982, "start station location" : { "type" : "Point", "coordinates" : [ -74.00176802, 40.75066386 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -74.0026376103, 40.7390169121 ] }, "start time" : ISODate("2016-01-01T00:00:48Z"), "stop time" : ISODate("2016-01-01T00:10:37Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf5d"), "tripduration" : 923, "start station id" : 268, "start station name" : "Howard St & Centre St", "end station id" : 3002, "end station name" : "South End Ave & Liberty St", "bikeid" : 22285, "usertype" : "Subscriber", "birth year" : 1958, "start station location" : { "type" : "Point", "coordinates" : [ -73.99973337, 40.71910537 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -74.015756, 40.711512 ] }, "start time" : ISODate("2016-01-01T00:00:41Z"), "stop time" : ISODate("2016-01-01T00:16:04Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf5e"), "tripduration" : 332, "start station id" : 3104, "start station name" : "Kent Ave & N 7 St", "end station id" : 389, "end station name" : "Broadway & Berry St", "bikeid" : 15788, "usertype" : "Subscriber", "birth year" : 1984, "start station location" : { "type" : "Point", "coordinates" : [ -73.96150225, 40.72057658 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -73.96525063, 40.71044554 ] }, "start time" : ISODate("2016-01-01T00:01:19Z"), "stop time" : ISODate("2016-01-01T00:06:51Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf5f"), "tripduration" : 2321, "start station id" : 3167, "start station name" : "Amsterdam Ave & W 73 St", "end station id" : 3164, "end station name" : "Columbus Ave & W 72 St", "bikeid" : 24183, "usertype" : "Subscriber", "birth year" : 1963, "start station location" : { "type" : "Point", "coordinates" : [ -73.98093044757842, 40.77966809007312 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -73.97898475, 40.7770575 ] }, "start time" : ISODate("2016-01-01T00:01:27Z"), "stop time" : ISODate("2016-01-01T00:40:08Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf60"), "tripduration" : 694, "start station id" : 268, "start station name" : "Howard St & Centre St", "end station id" : 497, "end station name" : "E 17 St & Broadway", "bikeid" : 15747, "usertype" : "Subscriber", "birth year" : 1996, "start station location" : { "type" : "Point", "coordinates" : [ -73.99973337, 40.71910537 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -73.99009296, 40.73704984 ] }, "start time" : ISODate("2016-01-01T00:02:18Z"), "stop time" : ISODate("2016-01-01T00:13:53Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf61"), "tripduration" : 1376, "start station id" : 527, "start station name" : "E 33 St & 2 Ave", "end station id" : 259, "end station name" : "South St & Whitehall St", "bikeid" : 23933, "usertype" : "Subscriber", "birth year" : 1963, "start station location" : { "type" : "Point", "coordinates" : [ -73.976056, 40.744023 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -74.01234218, 40.70122128 ] }, "start time" : ISODate("2016-01-01T00:03:12Z"), "stop time" : ISODate("2016-01-01T00:26:09Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf62"), "tripduration" : 1480, "start station id" : 2006, "start station name" : "Central Park S & 6 Ave", "end station id" : 2006, "end station name" : "Central Park S & 6 Ave", "bikeid" : 14562, "usertype" : "Subscriber", "birth year" : 1952, "start station location" : { "type" : "Point", "coordinates" : [ -73.97634151, 40.76590936 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -73.97634151, 40.76590936 ] }, "start time" : ISODate("2016-01-01T00:01:12Z"), "stop time" : ISODate("2016-01-01T00:25:52Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf63"), "tripduration" : 615, "start station id" : 432, "start station name" : "E 7 St & Avenue A", "end station id" : 311, "end station name" : "Norfolk St & Broome St", "bikeid" : 23993, "usertype" : "Subscriber", "birth year" : 1971, "start station location" : { "type" : "Point", "coordinates" : [ -73.98379855, 40.72621788 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -73.98802084, 40.7172274 ] }, "start time" : ISODate("2016-01-01T00:03:43Z"), "stop time" : ISODate("2016-01-01T00:13:59Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf64"), "tripduration" : 1770, "start station id" : 3226, "start station name" : "W 82 St & Central Park West", "end station id" : 509, "end station name" : "9 Ave & W 22 St", "bikeid" : 22541, "usertype" : "Subscriber", "birth year" : 1970, "start station location" : { "type" : "Point", "coordinates" : [ -73.97137, 40.78275 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -74.00197139, 40.7454973 ] }, "start time" : ISODate("2016-01-01T00:04:43Z"), "stop time" : ISODate("2016-01-01T00:34:14Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf65"), "tripduration" : 525, "start station id" : 331, "start station name" : "Pike St & Monroe St", "end station id" : 236, "end station name" : "St Marks Pl & 2 Ave", "bikeid" : 22193, "usertype" : "Subscriber", "birth year" : 1988, "start station location" : { "type" : "Point", "coordinates" : [ -73.99193043, 40.71173107 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -73.98713956, 40.7284186 ] }, "start time" : ISODate("2016-01-01T00:05:40Z"), "stop time" : ISODate("2016-01-01T00:14:25Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf66"), "tripduration" : 667, "start station id" : 444, "start station name" : "Broadway & W 24 St", "end station id" : 490, "end station name" : "8 Ave & W 33 St", "bikeid" : 18665, "usertype" : "Subscriber", "birth year" : 1964, "start station location" : { "type" : "Point", "coordinates" : [ -73.98915076, 40.7423543 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -73.993934, 40.751551 ] }, "start time" : ISODate("2016-01-01T00:05:41Z"), "stop time" : ISODate("2016-01-01T00:16:49Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf67"), "tripduration" : 240, "start station id" : 3165, "start station name" : "Central Park West & W 72 St", "end station id" : 3168, "end station name" : "Central Park West & W 85 St", "bikeid" : 22174, "usertype" : "Subscriber", "birth year" : 1976, "start station location" : { "type" : "Point", "coordinates" : [ -73.9762057363987, 40.77579376683666 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -73.96961715, 40.78472675 ] }, "start time" : ISODate("2016-01-01T00:06:35Z"), "stop time" : ISODate("2016-01-01T00:10:36Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf68"), "tripduration" : 539, "start station id" : 3117, "start station name" : "Franklin St & Dupont St", "end station id" : 3104, "end station name" : "Kent Ave & N 7 St", "bikeid" : 15061, "usertype" : "Subscriber", "birth year" : 1989, "start station location" : { "type" : "Point", "coordinates" : [ -73.95866, 40.73564 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -73.96150225, 40.72057658 ] }, "start time" : ISODate("2016-01-01T00:07:39Z"), "stop time" : ISODate("2016-01-01T00:16:39Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf69"), "tripduration" : 1245, "start station id" : 442, "start station name" : "W 27 St & 7 Ave", "end station id" : 545, "end station name" : "E 23 St & 1 Ave", "bikeid" : 24071, "usertype" : "Subscriber", "birth year" : 1970, "start station location" : { "type" : "Point", "coordinates" : [ -73.993915, 40.746647 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -73.97809472, 40.736502 ] }, "start time" : ISODate("2016-01-01T00:08:17Z"), "stop time" : ISODate("2016-01-01T00:29:03Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf6a"), "tripduration" : 479, "start station id" : 3117, "start station name" : "Franklin St & Dupont St", "end station id" : 3104, "end station name" : "Kent Ave & N 7 St", "bikeid" : 23563, "usertype" : "Subscriber", "birth year" : 1993, "start station location" : { "type" : "Point", "coordinates" : [ -73.95866, 40.73564 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -73.96150225, 40.72057658 ] }, "start time" : ISODate("2016-01-01T00:08:42Z"), "stop time" : ISODate("2016-01-01T00:16:42Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf6b"), "tripduration" : 398, "start station id" : 483, "start station name" : "E 12 St & 3 Ave", "end station id" : 483, "end station name" : "E 12 St & 3 Ave", "bikeid" : 15721, "usertype" : "Subscriber", "birth year" : 1972, "start station location" : { "type" : "Point", "coordinates" : [ -73.98889957, 40.73223272 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -73.98889957, 40.73223272 ] }, "start time" : ISODate("2016-01-01T00:09:19Z"), "stop time" : ISODate("2016-01-01T00:15:58Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf6c"), "tripduration" : 888, "start station id" : 284, "start station name" : "Greenwich Ave & 8 Ave", "end station id" : 439, "end station name" : "E 4 St & 2 Ave", "bikeid" : 15082, "usertype" : "Subscriber", "birth year" : 1982, "start station location" : { "type" : "Point", "coordinates" : [ -74.0026376103, 40.7390169121 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -73.98978041, 40.7262807 ] }, "start time" : ISODate("2016-01-01T00:08:47Z"), "stop time" : ISODate("2016-01-01T00:23:36Z") }
+{ "_id" : ObjectId("572bb8222b288919b68abf6d"), "tripduration" : 858, "start station id" : 532, "start station name" : "S 5 Pl & S 4 St", "end station id" : 401, "end station name" : "Allen St & Rivington St", "bikeid" : 17057, "usertype" : "Customer", "birth year" : "", "start station location" : { "type" : "Point", "coordinates" : [ -73.960876, 40.710451 ] }, "end station location" : { "type" : "Point", "coordinates" : [ -73.98997825, 40.72019576 ] }, "start time" : ISODate("2016-01-01T00:09:31Z"), "stop time" : ISODate("2016-01-01T00:23:49Z") }
+Type "it" for more
+MongoDB Enterprise atlas-ny3pd5-shard-0:PRIMARY> db.trips.find({"birth year":1961, "start station name":"Howard St & Centre St"}).pretty()
+{
+        "_id" : ObjectId("572bb8222b288919b68abf5b"),
+        "tripduration" : 889,
+        "start station id" : 268,
+        "start station name" : "Howard St & Centre St",
+        "end station id" : 3002,
+        "end station name" : "South End Ave & Liberty St",
+        "bikeid" : 22794,
+        "usertype" : "Subscriber",
+        "birth year" : 1961,
+        "start station location" : {
+                "type" : "Point",
+                "coordinates" : [
+                        -73.99973337,
+                        40.71910537
+                ]
+        },
+        "end station location" : {
+                "type" : "Point",
+                "coordinates" : [
+                        -74.015756,
+                        40.711512
+                ]
+        },
+        "start time" : ISODate("2016-01-01T00:01:06Z"),
+        "stop time" : ISODate("2016-01-01T00:15:56Z")
+}
+MongoDB Enterprise atlas-ny3pd5-shard-0:PRIMARY> db.inspections.find().pretty()
+{
+        "_id" : ObjectId("56d61033a378eccde8a8354f"),
+        "id" : "10021-2015-ENFO",
+        "certificate_number" : 9278806,
+        "business_name" : "ATLIXCO DELI GROCERY INC.",
+        "date" : "Feb 20 2015",
+        "result" : "No Violation Issued",
+        "sector" : "Cigarette Retail Dealer - 127",
+        "address" : {
+                "city" : "RIDGEWOOD",
+                "zip" : 11385,
+                "street" : "MENAHAN ST",
+                "number" : 1712
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a83550"),
+        "id" : "10057-2015-ENFO",
+        "certificate_number" : 6007104,
+        "business_name" : "LD BUSINESS SOLUTIONS",
+        "date" : "Feb 25 2015",
+        "result" : "Violation Issued",
+        "sector" : "Tax Preparers - 891",
+        "address" : {
+                "city" : "NEW YORK",
+                "zip" : 10030,
+                "street" : "FREDERICK DOUGLASS BLVD",
+                "number" : 2655
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a83551"),
+        "id" : "10084-2015-ENFO",
+        "certificate_number" : 9278914,
+        "business_name" : "MICHAEL GOMEZ RANGHALL",
+        "date" : "Feb 10 2015",
+        "result" : "No Violation Issued",
+        "sector" : "Locksmith - 062",
+        "address" : {
+                "city" : "QUEENS VLG",
+                "zip" : 11427,
+                "street" : "214TH ST",
+                "number" : 8823
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a83552"),
+        "id" : "1012-2015-CMPL",
+        "certificate_number" : 5346909,
+        "business_name" : "A&C CHIMNEY CORP.",
+        "date" : "Apr 22 2015",
+        "result" : "Violation Issued",
+        "sector" : "Home Improvement Contractor - 100",
+        "address" : {
+                "city" : "QUEENS VLG",
+                "zip" : 11428,
+                "street" : "210TH ST",
+                "number" : 9440
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a83553"),
+        "id" : "10127-2015-CMPL",
+        "certificate_number" : 5381180,
+        "business_name" : "ERIC CONSTRUCTION AND DECORATING INC.",
+        "date" : "Sep  8 2015",
+        "result" : "Violation Issued",
+        "sector" : "Home Improvement Contractor - 100",
+        "address" : {
+                "city" : "STATEN ISLAND",
+                "zip" : 10304,
+                "street" : "TODT HILL RD",
+                "number" : 1233
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a83554"),
+        "id" : "10172-2015-CMPL",
+        "certificate_number" : 9304489,
+        "business_name" : "UNNAMED HOT DOG VENDOR LICENSE NUMBER TA01158",
+        "date" : "Aug 21 2015",
+        "result" : "No Violation Issued",
+        "sector" : "Mobile Food Vendor - 881",
+        "address" : {
+                "city" : "",
+                "zip" : "",
+                "street" : "",
+                "number" : ""
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a83555"),
+        "id" : "102-2015-UNIT",
+        "certificate_number" : 10003479,
+        "business_name" : "SOUTH BRONX AUTOMOTIVE CORP",
+        "date" : "May 28 2015",
+        "result" : "Pass",
+        "sector" : "Tow Truck Company - 124",
+        "address" : {
+                "city" : "",
+                "zip" : "",
+                "street" : "",
+                "number" : ""
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a83556"),
+        "id" : "10268-2015-CMPL",
+        "certificate_number" : 9304816,
+        "business_name" : "UNNAMED HOT DOG VENDOR NO LICENSE NUMBER PROVIDED",
+        "date" : "Aug 19 2015",
+        "result" : "No Violation Issued",
+        "sector" : "Mobile Food Vendor - 881",
+        "address" : {
+                "city" : "",
+                "zip" : "",
+                "street" : "",
+                "number" : ""
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a83557"),
+        "id" : "10284-2015-ENFO",
+        "certificate_number" : 9287088,
+        "business_name" : "VYACHESLAV KANDZHANOV",
+        "date" : "Feb 25 2015",
+        "result" : "No Violation Issued",
+        "sector" : "Misc Non-Food Retail - 817",
+        "address" : {
+                "city" : "NEW YORK",
+                "zip" : 10030,
+                "street" : "FREDRCK D BLVD",
+                "number" : 2655
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a83558"),
+        "id" : "10312-2015-ENFO",
+        "certificate_number" : 9287090,
+        "business_name" : "GRICEYDA M VILLAR",
+        "date" : "Feb 25 2015",
+        "result" : "No Violation Issued",
+        "sector" : "Salons And Barbershop - 841",
+        "address" : {
+                "city" : "NEW YORK",
+                "zip" : 10030,
+                "street" : "FREDRCK D BLVD",
+                "number" : 2645
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a83559"),
+        "id" : "10302-2015-ENFO",
+        "certificate_number" : 9287089,
+        "business_name" : "NYC CANDY STORE SHOP CORP",
+        "date" : "Feb 25 2015",
+        "result" : "No Violation Issued",
+        "sector" : "Cigarette Retail Dealer - 127",
+        "address" : {
+                "city" : "NEW YORK",
+                "zip" : 10030,
+                "street" : "FREDRCK D BLVD",
+                "number" : 2653
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a8355a"),
+        "id" : "10290-2015-CMPL",
+        "certificate_number" : 9305498,
+        "business_name" : "AYAD YOUSSEF",
+        "date" : "Jul 23 2015",
+        "result" : "No Violation Issued",
+        "sector" : "Mobile Food Vendor - 881",
+        "address" : {
+                "city" : "JERSEY CITY",
+                "zip" : 7306,
+                "street" : "TONNELE AVE",
+                "number" : 70
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a8355b"),
+        "id" : "10318-2015-ENFO",
+        "certificate_number" : 9287092,
+        "business_name" : "BISHWANATH BISWAS",
+        "date" : "Feb 25 2015",
+        "result" : "No Violation Issued",
+        "sector" : "Mobile Food Vendor - 881",
+        "address" : {
+                "city" : "ELMHURST",
+                "zip" : 11373,
+                "street" : "75TH ST",
+                "number" : 4157
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a8355c"),
+        "id" : "1033-2015-CMPL",
+        "certificate_number" : 5347333,
+        "business_name" : "H & H FURNITURE",
+        "date" : "Apr 29 2015",
+        "result" : "Violation Issued",
+        "sector" : "Home Improvement Contractor - 100",
+        "address" : {
+                "city" : "S RICHMOND HL",
+                "zip" : 11419,
+                "street" : "101ST AVE",
+                "number" : 11420
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a8355d"),
+        "id" : "10351-2015-CMPL",
+        "certificate_number" : 5381196,
+        "business_name" : "NEW FINEST BUILDERS INC",
+        "date" : "Dec  1 2015",
+        "result" : "Violation Issued",
+        "sector" : "Home Improvement Contractor - 100",
+        "address" : {
+                "city" : "BROOKLYN",
+                "zip" : 11234,
+                "street" : "E 55TH ST",
+                "number" : 1320
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a8355e"),
+        "id" : "10391-2015-ENFO",
+        "certificate_number" : 3019415,
+        "business_name" : "WILFREDO DELIVERY SERVICE INC",
+        "date" : "Feb 26 2015",
+        "result" : "Fail",
+        "sector" : "Fuel Oil Dealer - 814",
+        "address" : {
+                "city" : "WADING RIVER",
+                "zip" : 11792,
+                "street" : "WADING RIVER MANOR RD",
+                "number" : 1607
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a8355f"),
+        "id" : "10423-2015-CMPL",
+        "certificate_number" : 9304139,
+        "business_name" : "LISANDRO CABRERA",
+        "date" : "Jul 17 2015",
+        "result" : "No Violation Issued",
+        "sector" : "Mobile Food Vendor - 881",
+        "address" : {
+                "city" : "BRONX",
+                "zip" : 10475,
+                "street" : "PALMER AVE",
+                "number" : 2234
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a83560"),
+        "id" : "1044-2016-ENFO",
+        "certificate_number" : 9318079,
+        "business_name" : "AZMY KIROLES",
+        "date" : "Dec 23 2015",
+        "result" : "No Violation Issued",
+        "sector" : "Mobile Food Vendor - 881",
+        "address" : {
+                "city" : "JERSEY CITY",
+                "zip" : 7306,
+                "street" : "VROOM ST",
+                "number" : 160
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a83561"),
+        "id" : "1044-2015-CMPL",
+        "certificate_number" : 5382334,
+        "business_name" : "BUILDING TO SERVE INC.",
+        "date" : "Jul 22 2015",
+        "result" : "Violation Issued",
+        "sector" : "Home Improvement Contractor - 100",
+        "address" : {
+                "city" : "JAMAICA",
+                "zip" : 11432,
+                "street" : "HILLSIDE AVE",
+                "number" : 17939
+        }
+}
+{
+        "_id" : ObjectId("56d61033a378eccde8a83562"),
+        "id" : "10459-2015-ENFO",
+        "certificate_number" : 3019419,
+        "business_name" : "SPRAGUE OPERATING RESOURCES LLC.",
+        "date" : "Feb 27 2015",
+        "result" : "Pass",
+        "sector" : "Fuel Oil Dealer - 814",
+        "address" : {
+                "city" : "LAWRENCE",
+                "zip" : 11559,
+                "street" : "BAY BLVD",
+                "number" : 1
+        }
+}
+Type "it" for more
+MongoDB Enterprise atlas-ny3pd5-shard-0:PRIMARY> db.inspections.find({"date":"Feb 20 2015"})
+{ "_id" : ObjectId("56d61033a378eccde8a8354f"), "id" : "10021-2015-ENFO", "certificate_number" : 9278806, "business_name" : "ATLIXCO DELI GROCERY INC.", "date" : "Feb 20 2015", "result" : "No Violation Issued", "sector" : "Cigarette Retail Dealer - 127", "address" : { "city" : "RIDGEWOOD", "zip" : 11385, "street" : "MENAHAN ST", "number" : 1712 } }
+{ "_id" : ObjectId("56d61033a378eccde8a83ed3"), "id" : "8373-2015-ENFO", "certificate_number" : 9287514, "business_name" : "BROADWAY KITCHENS & BATHS, INC.", "date" : "Feb 20 2015", "result" : "No Violation Issued", "sector" : "Home Improvement Contractor - 100", "address" : { "city" : "NEW YORK", "zip" : 10003, "street" : "BROADWAY", "number" : 819 } }
+{ "_id" : ObjectId("56d61033a378eccde8a83ee7"), "id" : "8719-2015-ENFO", "certificate_number" : 9287179, "business_name" : "JONG SUK LEE", "date" : "Feb 20 2015", "result" : "No Violation Issued", "sector" : "Mobile Food Vendor - 881", "address" : { "city" : "FRESH MEADOWS", "zip" : 11365, "street" : "193RD LN", "number" : "6721K" } }
+{ "_id" : ObjectId("56d61033a378eccde8a83eef"), "id" : "9028-2015-ENFO", "certificate_number" : 3033647, "business_name" : "LEE, CHEON O.", "date" : "Feb 20 2015", "result" : "Pass", "sector" : "Grocery-Retail - 808", "address" : { "city" : "BRONX", "zip" : 10461, "street" : "WESTCHESTER SQ", "number" : 36 } }
+{ "_id" : ObjectId("56d61033a378eccde8a83f02"), "id" : "9739-2015-ENFO", "certificate_number" : 9283936, "business_name" : "LEE, CHEON O.", "date" : "Feb 20 2015", "result" : "No Violation Issued", "sector" : "Stoop Line Stand - 033", "address" : { "city" : "BRONX", "zip" : 10461, "street" : "WESTCHESTER SQ", "number" : 36 } }
+{ "_id" : ObjectId("56d61033a378eccde8a83f03"), "id" : "9745-2015-ENFO", "certificate_number" : 9283937, "business_name" : "LEE, CHEON O.", "date" : "Feb 20 2015", "result" : "No Violation Issued", "sector" : "Cigarette Retail Dealer - 127", "address" : { "city" : "BRONX", "zip" : 10461, "street" : "WESTCHESTER SQ", "number" : 36 } }
+{ "_id" : ObjectId("56d61033a378eccde8a83f16"), "id" : "9973-2015-ENFO", "certificate_number" : 3019429, "business_name" : "TOSHIBA GLOBAL COMMERCE SOLUTIONS, INC", "date" : "Feb 20 2015", "result" : "Pass", "sector" : "Scale Dealer/Repairer - 107", "address" : { "city" : "DURHAM", "zip" : 27709, "street" : "CORNWALLIS RD", "number" : 3039 } }
+{ "_id" : ObjectId("56d61033a378eccde8a83f17"), "id" : "9983-2015-ENFO", "certificate_number" : 3019430, "business_name" : "TOSHIBA GLOBAL COMMERCE SOLUTIONS, INC", "date" : "Feb 20 2015", "result" : "Pass", "sector" : "Scale Dealer/Repairer - 107", "address" : { "city" : "DURHAM", "zip" : 27709, "street" : "CORNWALLIS RD", "number" : 3030 } }
+{ "_id" : ObjectId("56d61033a378eccde8a83f7d"), "id" : "9107-2015-ENFO", "certificate_number" : 5377866, "business_name" : "MILAGRO GROCERY CORP", "date" : "Feb 20 2015", "result" : "Violation Issued", "sector" : "Cigarette Retail Dealer - 127", "address" : { "city" : "BROOKLYN", "zip" : 11221, "street" : "KNICKERBOCKER AVE", "number" : 665 } }
+{ "_id" : ObjectId("56d61033a378eccde8a840fd"), "id" : "9090-2015-ENFO", "certificate_number" : 50057007, "business_name" : "CHRISTINE, INC.", "date" : "Feb 20 2015", "result" : "No Violation Issued", "sector" : "Cigarette Retail Dealer - 127", "address" : { "city" : "NEW YORK", "zip" : 10018, "street" : "BROADWAY", "number" : 1420 } }
+{ "_id" : ObjectId("56d61033a378eccde8a84221"), "id" : "8814-2015-ENFO", "certificate_number" : 9294556, "business_name" : "EUS SHOE REPAIR", "date" : "Feb 20 2015", "result" : "No Violation Issued", "sector" : "Misc Non-Food Retail - 817", "address" : { "city" : "ASTORIA", "zip" : 11106, "street" : "BROADWAY", "number" : 3210 } }
+{ "_id" : ObjectId("56d61033a378eccde8a8430e"), "id" : "8735-2015-ENFO", "certificate_number" : 9287144, "business_name" : "JEAN CAFE II CORP", "date" : "Feb 20 2015", "result" : "No Violation Issued", "sector" : "Grocery-Retail - 808", "address" : { "city" : "NEW YORK", "zip" : 10010, "street" : "LEXINGTON AVE", "number" : 31 } }
+{ "_id" : ObjectId("56d61033a378eccde8a8440a"), "id" : "8877-2015-ENFO", "certificate_number" : 3018611, "business_name" : "EL SOLITARIO PRODUCE & MEAT INC.", "date" : "Feb 20 2015", "result" : "Pass", "sector" : "Supermarket - 819", "address" : { "city" : "BROOKLYN", "zip" : 11208, "street" : "CRESCENT ST", "number" : 416 } }
+{ "_id" : ObjectId("56d61033a378eccde8a844bf"), "id" : "8724-2015-ENFO", "certificate_number" : 9278997, "business_name" : "LOLA DO LLC", "date" : "Feb 20 2015", "result" : "Out of Business", "sector" : "Grocery-Retail - 808", "address" : { "city" : "BROOKLYN", "zip" : 11238, "street" : "GREENE AVE", "number" : 214 } }
+{ "_id" : ObjectId("56d61033a378eccde8a84584"), "id" : "8788-2015-ENFO", "certificate_number" : 50056346, "business_name" : "LUCKY DELI AT 1420 CORP.", "date" : "Feb 20 2015", "result" : "No Evidence of Activity", "sector" : "Cigarette Retail Dealer - 127", "address" : { "city" : "BROOKLYN", "zip" : 11236, "street" : "ROCKAWAY PKWY", "number" : 1420 } }
+{ "_id" : ObjectId("56d61033a378eccde8a845c5"), "id" : "9060-2015-ENFO", "certificate_number" : 50056704, "business_name" : "GREAT JADE DELI & GROCERY INC", "date" : "Feb 20 2015", "result" : "No Violation Issued", "sector" : "Cigarette Retail Dealer - 127", "address" : { "city" : "FLUSHING", "zip" : 11354, "street" : "34TH AVE", "number" : 14602 } }
+{ "_id" : ObjectId("56d61033a378eccde8a84602"), "id" : "8729-2015-ENFO", "certificate_number" : 9278996, "business_name" : "GREENE VALLEY MARKET CORP.", "date" : "Feb 20 2015", "result" : "Warning", "sector" : "Cigarette Retail Dealer - 127", "address" : { "city" : "BROOKLYN", "zip" : 11238, "street" : "GREENE AVE", "number" : 216 } }
+{ "_id" : ObjectId("56d61033a378eccde8a8462f"), "id" : "8596-2015-ENFO", "certificate_number" : 9278328, "business_name" : "PERALTA-BUENO CORP.", "date" : "Feb 20 2015", "result" : "No Violation Issued", "sector" : "Cigarette Retail Dealer - 127", "address" : { "city" : "BROOKLYN", "zip" : 11208, "street" : "PITKIN AVE", "number" : 2578 } }
+{ "_id" : ObjectId("56d61033a378eccde8a84814"), "id" : "9761-2015-ENFO", "certificate_number" : 9283947, "business_name" : "T-MOBILE NORTHEAST LLC", "date" : "Feb 20 2015", "result" : "No Violation Issued", "sector" : "Electronic Store - 001", "address" : { "city" : "BRONX", "zip" : 10461, "street" : "WESTCHESTER SQ", "number" : 43 } }
+{ "_id" : ObjectId("56d61033a378eccde8a84822"), "id" : "8648-2015-ENFO", "certificate_number" : 9278555, "business_name" : "AMERICAN EAGLE OUTFITTERS", "date" : "Feb 20 2015", "result" : "No Violation Issued", "sector" : "Wearing Apparel - 450", "address" : { "city" : "BROOKLYN", "zip" : 11234, "street" : "KINGS PLZ", "number" : 5379 } }
+Type "it" for more
+MongoDB Enterprise atlas-ny3pd5-shard-0:PRIMARY> db.inspections.find({"date":"Feb 20 2015"}).count()
+320
