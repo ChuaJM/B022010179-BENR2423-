@@ -17,17 +17,20 @@ client.connect(async err => {
     //Array to store all the names
     const username = `${faker.name.firstName()} ${faker.name.lastName()}`;
     const user_password = faker.internet.password();
-    const user_address =   faker.address.city();
-    const saltRounds = 10
+    const user_address = faker.address.city();
 
+
+    const saltRounds = 10   
     bcrypt.genSalt(saltRounds, function (saltError, salt){
         if(saltError){
             throw saltError
-        }else{
+        }
+        else{
             bcrypt.hash(user_password, salt, function(hashError, hash){
                 if (hashError){
                     throw hashError
-                }else {
+                }
+                else {
                     const hash_password = hash                    
                     name.push({username, user_address, hash_password});
 
