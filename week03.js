@@ -35,10 +35,10 @@ client.connect(err => {
     try{
 		for(let i=0; i<100; i++) {
 			client.db("utem_portal").collection("users").insertOne({
-				"Name": Name[i],
-                "Username": Username[i],
-				"Password": Password[i],
-				"City": Address[i]
+				Name: Name[i],
+                Username: Username[i],
+				Password: Password[i],
+				City: Address[i]
 			})
 		}
 
@@ -54,7 +54,7 @@ client.connect(err => {
                             throw hashError
                         }
                         else {
-                            client.db("utem_portal").collection("users").updateOne({"Name": Name[i]}, {$set: {"Password": hash}})
+                            client.db("utem_portal").collection("users").updateOne({Name: Name[i]}, {$set: {Password: hash}})
                         }
                     })
                 }
